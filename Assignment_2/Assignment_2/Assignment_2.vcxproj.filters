@@ -20,5 +20,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Account.h" />
+    <ClInclude Include="Timer.h" />
   </ItemGroup>
 </Project>
