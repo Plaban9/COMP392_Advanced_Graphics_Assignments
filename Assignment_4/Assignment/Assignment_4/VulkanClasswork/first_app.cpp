@@ -125,19 +125,13 @@ namespace lve
 
 	void FirstApp::loadGameObjects()
 	{
-		std::shared_ptr<LveModel> lveModel = LveModel::createModelFromFile(lveDevice, "Models/flat_vase.obj");
-		auto flatVase = LveGameObject::createGameObject();
-		flatVase.model = lveModel;
-		flatVase.transform.translation = { -.5f, .5f, 2.5f };
-		flatVase.transform.scale = glm::vec3{ 3.f };
-		gameObjects.push_back(std::move(flatVase));
-
-		lveModel = LveModel::createModelFromFile(lveDevice, "Models/smooth_vase.obj");
-		auto smoothVase = LveGameObject::createGameObject();
-		smoothVase.model = lveModel;
-		smoothVase.transform.translation = { .5f, .5f, 2.5f };
-		smoothVase.transform.scale = glm::vec3{ 3.f };
-		gameObjects.push_back(std::move(smoothVase));
+		std::shared_ptr<LveModel> lveModel = LveModel::createModelFromFile(lveDevice, "Models/Porsche_911_GT2.obj");
+		auto porsche = LveGameObject::createGameObject();
+		porsche.model = lveModel;
+		porsche.transform.translation = { 0.25f, 0.0f, 2.5f };
+		porsche.transform.scale = glm::vec3{ 0.5f };
+		porsche.transform.rotation = glm::vec3{ glm::half_pi<float>() / 50.0f, glm::pi<float>() / 4.0f, glm::pi<float>() };
+		gameObjects.push_back(std::move(porsche));
 	}
 
 }  // namespace lve
