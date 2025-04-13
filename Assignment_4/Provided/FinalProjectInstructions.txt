@@ -1,0 +1,26 @@
+In this assignment, you will apply the C++ programming skills and Vulkan/GLFW techniques from our class tutorials to create an interactive 3D application. Your task is to load a 3D model downloaded from Sketchfab into a Vulkan-rendered scene and implement keyboard controls to move it. Follow the steps below to complete the assignment:
+
+Set Up the Vulkan Environment: Using Vulkan and GLFW (as covered in class), initialize a window, create a Vulkan instance, set up a swap chain, and configure a basic render pipeline with a vertex and fragment shader. Include a perspective camera and a simple uniform buffer for transformations.
+Load a 3D Model: Download a 3D model from Sketchfab in a compatible format (e.g., glTF or OBJ). Load the model’s vertices, indices, and textures into Vulkan buffers and descriptor sets.
+Implement Keyboard Controls: Add functionality to move the 3D model using keyboard input via GLFW. At a minimum, implement the following controls:
+Up Arrow: Move the model forward (e.g., along the positive Z-axis).
+Down Arrow: Move the model backward (e.g., along the negative Z-axis).
+Left Arrow: Move the model left (e.g., along the negative X-axis).
+Right Arrow: Move the model right (e.g., along the positive X-axis).
+Update the model’s transformation matrix in the uniform buffer each frame based on keyboard input.
+Optional: Add extra controls (e.g., W/S for up/down or A/D for rotation) for bonus points.
+Test and Debug: Ensure the model loads correctly, renders without artifacts, and moves smoothly in response to keyboard input. Verify that the Vulkan pipeline and synchronization (e.g., semaphores, fences) function properly.
+Deliverables:
+
+Submit your C++ source code files (e.g., .cpp and .h files), Vulkan shader files (e.g., .vert and .frag in SPIR-V format), project configuration files (e.g., CMakeLists.txt), and the 3D model file (or a link to the Sketchfab model page).
+Include a brief README (1-2 sentences) describing the model you chose and instructions for compiling and running the program (e.g., required Vulkan SDK version and key controls).
+Learning Objectives:
+
+Demonstrate proficiency in setting up a Vulkan rendering pipeline and loading 3D model data into GPU buffers.
+Implement real-time keyboard input handling with GLFW to update a 3D scene dynamically.
+Notes:
+
+Refer to the class tutorials on Vulkan setup, GLFW input handling, and model loading for guidance.
+Use a simple model (e.g., low polygon count) to keep rendering manageable within Vulkan’s constraints.
+Pay attention to Vulkan synchronization to avoid rendering issues during movement.
+This assignment builds on the Vulkan and GLFW concepts we’ve explored in class. Enjoy experimenting with your interactive 3D scene!
